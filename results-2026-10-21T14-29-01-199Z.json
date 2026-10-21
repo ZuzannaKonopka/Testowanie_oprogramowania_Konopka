@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-10-21T14:29:01.199Z",
+  "target": "/api/health",
+  "configuration": {
+    "concurrentWorkers": 5,
+    "requestsPerWorker": 10,
+    "totalRequests": 50
+  },
+  "results": {
+    "completed": 50,
+    "errors": 0,
+    "errorRate": 0,
+    "durationMs": 52.04,
+    "requestsPerSecond": 960.72,
+    "responseMs": {
+      "min": 1.54,
+      "median": 3.57,
+      "p95": 12.5,
+      "p99": 18.03,
+      "max": 18.03
+    }
+  },
+  "notes": "Wyniki dotyczą lokalnego endpointu health i zależą od sprzętu. Nie są gwarancją wydajności wdrożenia produkcyjnego."
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prosta aplikacja do wspólnego zarządzania listami zakupów.">
+  <title>Lista zakupów</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="top"><div class="wrap"><div><p class="eyebrow">PROJEKT LABORATORYJNY</p><h1>Lista zakupów</h1></div><button id="logout" class="secondary hidden">Wyloguj</button></div></header>
+  <main class="wrap">
+    <div id="notice" role="status" aria-live="polite"></div>
+    <section id="auth" class="panel auth-grid">
+      <div><h2>Logowanie</h2><form id="login-form"><label>E-mail<input name="email" type="email" autocomplete="email" required maxlength="254"></label><label>Hasło<input name="password" type="password" autocomplete="current-password" required minlength="10" maxlength="128"></label><button type="submit">Zaloguj</button></form></div>
+      <div><h2>Utwórz konto</h2><form id="register-form"><label>E-mail<input name="email" type="email" autocomplete="email" required maxlength="254"></label><label>Hasło (min. 10 znaków)<input name="password" type="password" autocomplete="new-password" required minlength="10" maxlength="128"></label><button type="submit">Zarejestruj</button></form></div>
+    </section>
+    <section id="workspace" class="hidden">
+      <div class="welcome"><p>Zalogowano jako <strong id="current-user"></strong></p></div>
+      <section class="panel"><h2>Nowa lista</h2><form id="list-form" class="inline-form"><label>Nazwa listy<input name="name" required maxlength="100" placeholder="Np. Zakupy na weekend"></label><label>Data zakupów<input name="dueDate" type="date"></label><button type="submit">Utwórz listę</button></form></section>
+      <section><div class="section-title"><h2>Twoje listy i listy udostępnione</h2><button id="refresh" class="secondary">Odśwież</button></div><div id="lists" class="lists"></div></section>
+    </section>
+    <section class="footnote"><p>Hasła są przechowywane jako skróty scrypt. Dane aplikacji są zapisywane lokalnie w pliku JSON. To projekt edukacyjny, nie system produkcyjny.</p></section>
+  </main>
+</body>
+</html>

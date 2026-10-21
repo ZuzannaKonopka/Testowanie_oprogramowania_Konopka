@@ -1,0 +1,7 @@
+node_modules/
+.env
+.data/
+coverage/
+performance/results-*.json
+security/zap-report-*.html
+.DS_Store
