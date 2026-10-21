@@ -1,0 +1,1 @@
+# Testowanie_oprogramowania_Konopka
